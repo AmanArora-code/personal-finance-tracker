@@ -97,7 +97,7 @@ JWT_SECRET=your_jwt_secret_key
 ## 🙌 Author
 
 **Aman Arora**  
-Final-year MCA Student  
+MCA Graduate
 Aspiring Full Stack Developer  
 GitHub: [AmanArora-code](https://github.com/AmanArora-code)
 
