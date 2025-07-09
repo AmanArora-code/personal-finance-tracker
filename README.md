@@ -53,7 +53,7 @@ node index.js
 
 ```
 email: user@example.com
-password: 123456
+password: 1234
 ```
 
 ---
