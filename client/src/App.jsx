@@ -21,7 +21,7 @@ function App() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        `${import.meta.env.VITE_API_URL}/api/auth/register`,
         registerData
       );
       alert(res.data.message);
@@ -34,7 +34,7 @@ function App() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        `${import.meta.env.VITE_API_URL}/api/auth/login`,
         loginData
       );
       alert(res.data.message);

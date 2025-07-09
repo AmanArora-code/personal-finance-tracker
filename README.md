@@ -45,7 +45,8 @@ npm run dev
 cd server
 npm install
 node index.js
-````
+```
+
 ---
 
 ## 🧪 Test Credentials
@@ -64,7 +65,7 @@ Create a `.env` file in each of the following folders:
 ### 📁 client/.env
 
 ```env
-VITE_API_URL=http://localhost:5000
+VITE_API_URL=${import.meta.env.VITE_API_URL}
 ```
 
 ### 📁 server/.env
@@ -82,7 +83,7 @@ JWT_SECRET=your_jwt_secret_key
 ### 📁 client/.env.example
 
 ```env
-VITE_API_URL=http://localhost:5000
+VITE_API_URL=${import.meta.env.VITE_API_URL}
 ```
 
 ### 📁 server/.env.example
@@ -92,6 +93,7 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 ```
+
 ---
 
 ## 🙌 Author

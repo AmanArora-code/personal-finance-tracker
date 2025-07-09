@@ -33,7 +33,7 @@ const ExpenseManager = () => {
   const fetchExpenses = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/expenses",
+        `${import.meta.env.VITE_API_URL}/api/expenses`,
         headers
       );
       setExpenses(res.data);
@@ -44,7 +44,7 @@ const ExpenseManager = () => {
 
   const fetchBudgets = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/budgets", headers);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/budgets`, headers);
       setBudgets(res.data);
     } catch (err) {
       alert("Failed to fetch budgets");
@@ -61,14 +61,14 @@ const ExpenseManager = () => {
     try {
       if (editingId) {
         await axios.put(
-          `http://localhost:5000/api/expenses/${editingId}`,
+          `${import.meta.env.VITE_API_URL}/api/expenses/${editingId}`,
           form,
           headers
         );
         setEditingId(null);
       } else {
         await axios.post(
-          "http://localhost:5000/api/expenses/add",
+          `${import.meta.env.VITE_API_URL}/api/expenses/add`,
           form,
           headers
         );
@@ -103,7 +103,7 @@ const ExpenseManager = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/expenses/${id}`, headers);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/api/expenses/${id}`, headers);
       fetchExpenses();
     } catch (err) {
       alert("Failed to delete expense");
@@ -141,7 +141,7 @@ const ExpenseManager = () => {
 
             try {
               const res = await axios.post(
-                "http://localhost:5000/api/budgets",
+                `${import.meta.env.VITE_API_URL}/api/budgets`,
                 body,
                 headers
               );
